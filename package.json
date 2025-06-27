@@ -13,9 +13,11 @@
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.1.2",
     "@mui/material": "^7.1.2",
-    "next": "15.3.4",
+    "firebase": "^11.9.1",
+    "next": "^15.3.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "shadcn": "^2.7.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
