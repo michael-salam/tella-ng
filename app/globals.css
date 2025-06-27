@@ -2,6 +2,10 @@
 
 body {
   font-family: var(--font-poppins);
+  background-color: #f4f4f4;
+  letter-spacing: -2%;
+  color: #555555;
+  line-height: 1.5;
 }
 
 main {
@@ -9,9 +13,14 @@ main {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h6 {
   font-weight: bold;
   line-height: 1;
+  color: #333333;
 }
 
 h1 {
