@@ -1,9 +1,52 @@
+import { faqs } from "@/dummyData";
+import Link from "next/link";
+import Navbar from "./ui/navbar";
+
 export default function Home() {
   return (
     <main>
-      <h1>Something</h1>
-      <h2>Something</h2>
-      <h3>Something</h3>
+      <Navbar />
+
+      <h1 className="text-center max-w-[90%] mx-auto mb-4">
+        The platform for underserved Nigerians to speak up and be heard
+      </h1>
+
+      <p className="max-w-[50ch] mx-auto text-center mb-8 text-lg">
+        Report issues in your area and help local authorities take action — no
+        smartphone, no internet, no problem.
+      </p>
+
+      <div className="flex gap-4 justify-center mb-20">
+        <Link
+          href="/auth"
+          className="bg-[#10613A] text-[#F4F4F4] px-8 font-medium py-4 rounded-lg"
+        >
+          Use web version
+        </Link>
+        <Link
+          href="/about"
+          className="text-[#10613A] px-8 font-medium bg-[#10613A]/10 py-4 rounded-lg"
+        >
+          Use USSD - <span className="font-bold">*384*60#</span>
+        </Link>
+      </div>
+
+      {faqs.map((faq) => (
+        <div
+          key={faq.id}
+          className="w-4/5 mx-auto rounded-lg bg-[#10613A]/5 py-4 px-5 mb-4"
+        >
+          <p className="font-semibold text-[#333333] mb-2">{faq.question}</p>
+          <p>{faq.answer}</p>
+        </div>
+      ))}
+
+      <footer className="p-4 text-sm bg-[#10613A] text-[#F4F4F4] flex items-center justify-between mt-20 rounded-lg mb-4">
+        <p>&copy; {new Date().getFullYear()} Tella. All rights reserved.</p>
+        <Link href="/privacy" className="hover:underline">
+          Privacy Policy
+        </Link>
+      </footer>
     </main>
   );
 }
