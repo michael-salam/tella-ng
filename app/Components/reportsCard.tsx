@@ -3,6 +3,7 @@ import { reports } from "@/dummyData";
 import Image from "next/image";
 import placeholderImg from "../Assets/placeholder.png";
 import { useState } from "react";
+import Link from "next/link";
 interface ReportsCardProps {
   item: {
     images: {
@@ -17,14 +18,18 @@ interface ReportsCardProps {
     };
     location: string;
     status: string;
+    id: string;
   };
 }
 
 const ReportsCard = ({ item }: ReportsCardProps) => {
   return (
-    <div className="max-w-2xl py-3 flex items-center mx-auto">
-      <div className="flex items-center cursor-pointer hover:scale-105 transition-all justify-between w-full py-5 border-b border-gray-200 gap-4">
-        <Image  
+    <div className="max-w-3xl py-3 flex items-center mx-auto">
+      <Link
+        href={`/Reports/${item?.id}`}
+        className="flex items-center cursor-pointer hover:scale-105 transition-all justify-between w-full py-5 border-b border-gray-200 gap-4"
+      >
+        <Image
           className="h-28 w-28 rounded-2xl hover:scale-105 transition-all cursor-pointer object-cover"
           src={placeholderImg}
           alt={"img"}
@@ -42,7 +47,7 @@ const ReportsCard = ({ item }: ReportsCardProps) => {
             <p> | {item?.location}</p>
           </div>
         </div>
-      </div>
+      </Link>
 
       <button
         className={`p-2 text-sm rounded-lg shadow ${
