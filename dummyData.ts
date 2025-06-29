@@ -14,7 +14,7 @@ export const reports = [
     images: [
       {
         id: "img-1",
-        dataurl: "https://via.placeholder.com/150",
+        dataurl: "https://placehold.co/600x400",
         altText: "Dry tap in Karu",
       },
     ],

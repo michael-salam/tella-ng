@@ -44,6 +44,7 @@ const Page = () => {
 
   return (
     <div>
+      <h2>Admin</h2>
       <button
         onClick={handleGoogleSignIn}
         className="py-5 px-10 cursor-pointer rounded-xl text-white bg-[#10613A]"
