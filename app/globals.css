@@ -38,6 +38,7 @@ h3 {
 label {
   color: #333333;
   font-weight: 500;
+  display: block;
 }
 
 button, link {

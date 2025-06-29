@@ -11,13 +11,7 @@ export const reports = [
       name: "Aisha Bello",
       email: "aisha@example.com",
     },
-    images: [
-      {
-        id: "img-1",
-        dataurl: "https://placehold.co/600x400",
-        altText: "Dry tap in Karu",
-      },
-    ],
+    image: "https://placehold.co/600x400",
     status: "pending",
   },
   {
@@ -32,13 +26,7 @@ export const reports = [
       name: "John Ade",
       email: "john@example.com",
     },
-    images: [
-      {
-        id: "img-2",
-        dataurl: "https://via.placeholder.com/150",
-        altText: "Dark streets in Yaba",
-      },
-    ],
+    image: "https://placehold.co/600x400",
     status: "in_progress",
   },
   {
@@ -53,13 +41,7 @@ export const reports = [
       name: "Ngozi Ude",
       email: "ngozi@example.com",
     },
-    images: [
-      {
-        id: "img-3",
-        dataurl: "https://via.placeholder.com/150",
-        altText: "Large pothole",
-      },
-    ],
+    image: "https://placehold.co/600x400",
     status: "resolved",
   },
   {
@@ -74,13 +56,7 @@ export const reports = [
       name: "Chuka Nnamdi",
       email: "chuka@example.com",
     },
-    images: [
-      {
-        id: "img-4",
-        dataurl: "https://via.placeholder.com/150",
-        altText: "Empty clinic gate",
-      },
-    ],
+    image: "https://placehold.co/600x400",
     status: "pending",
   },
   {
@@ -95,13 +71,7 @@ export const reports = [
       name: "Fatima Musa",
       email: "fatima@example.com",
     },
-    images: [
-      {
-        id: "img-5",
-        dataurl: "https://via.placeholder.com/150",
-        altText: "Damaged transformer",
-      },
-    ],
+    image: "https://placehold.co/600x400",
     status: "pending",
   },
   {
@@ -115,13 +85,7 @@ export const reports = [
       name: "Emeka Obi",
       email: "emeka@example.com",
     },
-    images: [
-      {
-        id: "img-6",
-        dataurl: "https://via.placeholder.com/150",
-        altText: "Flooded street",
-      },
-    ],
+    image: "https://placehold.co/600x400",
     status: "in_progress",
   },
   {
@@ -136,13 +100,7 @@ export const reports = [
       name: "Bola Hassan",
       email: "bola@example.com",
     },
-    images: [
-      {
-        id: "img-7",
-        dataurl: "https://via.placeholder.com/150",
-        altText: "Crowded hospital hallway",
-      },
-    ],
+    image: "https://placehold.co/600x400",
     status: "resolved",
   },
   {
@@ -157,13 +115,7 @@ export const reports = [
       name: "Kabir Lawal",
       email: "kabir@example.com",
     },
-    images: [
-      {
-        id: "img-8",
-        dataurl: "https://via.placeholder.com/150",
-        altText: "Water leak on street",
-      },
-    ],
+    image: "https://placehold.co/600x400",
     status: "pending",
   },
   {
@@ -177,13 +129,7 @@ export const reports = [
       name: "Gloria Eze",
       email: "gloria@example.com",
     },
-    images: [
-      {
-        id: "img-9",
-        dataurl: "https://via.placeholder.com/150",
-        altText: "Collapsed drainage slab",
-      },
-    ],
+    image: "https://placehold.co/600x400",
     status: "pending",
   },
   {
@@ -197,13 +143,7 @@ export const reports = [
       name: "Isaac Adeniran",
       email: "isaac@example.com",
     },
-    images: [
-      {
-        id: "img-10",
-        dataurl: "https://via.placeholder.com/150",
-        altText: "Burnt extension socket",
-      },
-    ],
+    image: "https://placehold.co/600x400",
     status: "in_progress",
   },
   // ... add 10 more if you want — let me know and I’ll continue
@@ -237,14 +177,7 @@ export const faqs = [
   {
     id: "faq-5",
     question: "Can I upload photos with my report?",
-    answer:
-      "Yes. You can optionally attach one or more images to help describe the issue more clearly.",
-  },
-  {
-    id: "faq-6",
-    question: "What if I don’t have a smartphone or internet access?",
-    answer:
-      "We're designing a USSD version of Tella that allows users with basic phones to submit issues via our short code - *384*60#.",
+    answer: "Yes. You can optionally attach one or more image.",
   },
   {
     id: "faq-7",

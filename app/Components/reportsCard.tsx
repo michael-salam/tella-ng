@@ -6,19 +6,18 @@ import { useState } from "react";
 import Link from "next/link";
 interface ReportsCardProps {
   item: {
-    images: {
-      id: string;
-      dataurl: string;
-    };
+    id: string;
     title: string;
     description: string;
     issueType: string;
-    submittedBy: {
-      name: string;
-    };
     location: string;
+    submittedBy: {
+      id: string;
+      name: string;
+      email: string;
+    };
+    image: string;
     status: string;
-    id: string;
   };
 }
 
@@ -31,7 +30,9 @@ const ReportsCard = ({ item }: ReportsCardProps) => {
       >
         <Image
           className="h-28 w-28 rounded-2xl hover:scale-105 transition-all cursor-pointer object-cover"
-          src={placeholderImg}
+          src={item?.image || placeholderImg}
+          height={112}
+          width={112}
           alt={"img"}
         />
         <div className="flex flex-col w-[80%] gap-1">
