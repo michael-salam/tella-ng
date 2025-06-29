@@ -1,7 +1,7 @@
 import { faqs } from "@/dummyData";
 import Link from "next/link";
 import Navbar from "./ui/navbar";
-import Footer from "./Components/Footer";
+import Footer from "./ui/footer";
 
 export default function Home() {
   return (
@@ -19,13 +19,13 @@ export default function Home() {
 
       <div className="flex gap-4 justify-center mb-20">
         <Link
-          href="/auth"
+          href="/send-a-report"
           className="bg-[#10613A] text-[#F4F4F4] px-8 font-medium py-4 rounded-lg"
         >
           Use web version
         </Link>
         <Link
-          href="/about"
+          href="/send-a-report"
           className="text-[#10613A] px-8 font-medium bg-[#10613A]/10 py-4 rounded-lg"
         >
           Use USSD - <span className="font-bold">*384*60#</span>

@@ -11,9 +11,10 @@ import { redirect } from "next/navigation";
 import { useState } from "react";
 // import { signInWithRedirect } from "firebase/auth";
 
-const user = localStorage.getItem("admin");
+const userString = localStorage.getItem("user");
+const user = userString ? JSON.parse(userString) : null;
 
-if (user) redirect("/Reports");
+if (user && user.role === "user") redirect("/send-a-report");
 
 const Page = () => {
   const [isLoadingSignIn, setIsLoadingSignIn] = useState(false);
@@ -21,18 +22,18 @@ const Page = () => {
     email: "",
     password: "",
     photoURL: "",
-    role: "admin",
+    role: "user",
   });
 
   const handleSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    localStorage.setItem("admin", JSON.stringify(formData));
+    localStorage.setItem("user", JSON.stringify(formData));
     setFormData({
       email: "",
       password: "",
       photoURL: "",
-      role: "admin",
+      role: "user",
     });
 
     window.location.reload();
@@ -56,9 +57,9 @@ const Page = () => {
           name: user?.displayName,
           email: user?.email,
           photoURL: user?.photoURL,
-          role: "admin",
+          role: "user",
         };
-        localStorage.setItem("admin", JSON.stringify(userInfo));
+        localStorage.setItem("user", JSON.stringify(userInfo));
         setIsLoadingSignIn(false);
         console.log(user);
         window.location.reload();
@@ -80,10 +81,9 @@ const Page = () => {
 
   return (
     <main>
-      <h1 className="text-center mb-4 mt-20">Sign in as an Admin</h1>
+      <h1 className="text-center mb-4 mt-20">Sign in to Tella</h1>
       <p className="text-center mb-8 text-gray-600 max-w-[40ch] mx-auto">
-        Admins: Sign in to securely access and manage administrative features of
-        Tella.
+        Securely access your account and manage your Tella experience.
       </p>
 
       <form onSubmit={handleSubmitForm} className="max-w-md mx-auto">

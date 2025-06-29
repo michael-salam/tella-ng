@@ -1,6 +1,13 @@
+"use client";
+
+import { redirect } from "next/navigation";
 import Navbar from "../ui/navbar";
 
 const SendAReportPage = () => {
+  const userString = localStorage.getItem("user");
+
+  if (!userString) redirect("/auth/signin");
+
   return (
     <main>
       <Navbar />

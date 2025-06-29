@@ -34,3 +34,12 @@ h2 {
 h3 {
   font-size: 1.75rem;
 }
+
+label {
+  color: #333333;
+  font-weight: 500;
+}
+
+button, link {
+  cursor: pointer;
+}

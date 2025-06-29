@@ -1,4 +1,4 @@
-import Footer from "../Components/Footer";
+import Footer from "../ui/footer";
 import ReportsCard from "../Components/reportsCard";
 import Navbar from "../ui/navbar";
 import { reports } from "@/dummyData";
@@ -7,7 +7,9 @@ const Reports = () => {
     <main>
       <Navbar />
       <h1 className="mb-4 text-center">{reports.length} New Reports</h1>
-      <p className="text-center py-1">What are people speaking about right now?.</p>
+      <p className="text-center py-1">
+        What are people speaking about right now?.
+      </p>
 
       {reports.map((item, idx) => (
         <ReportsCard key={idx} item={item} />

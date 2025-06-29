@@ -4,7 +4,7 @@ import { reports } from "@/dummyData";
 import { useParams } from "next/navigation";
 import Image from "next/image";
 import placeholderImg from "@/app/Assets/placeholder.png";
-import Footer from "@/app/Components/Footer";
+import Footer from "@/app/ui/footer";
 const ReportsDetails = () => {
   const params = useParams();
   return (
